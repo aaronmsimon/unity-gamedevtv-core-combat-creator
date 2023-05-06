@@ -1,29 +1,29 @@
-[Unity RPG Core Combat Creator](https://www.gamedev.tv/p/)
+[Unity RPG Core Combat Creator](https://www.gamedev.tv/p/unity-rpg)
 by [GameDev.tv](https://www.gamedev.tv)
 
-![Unity RPG Core Combat Creator](https://cdn.filestackcontent.com/uVFETbJaQ6my43PerpgZ)
+![Unity RPG Core Combat Creator](https://cdn.filestackcontent.com/kLgaSNZZSq6viqMMiLfi)
 
 
 ## Images
 <table>
     <tr>
-        <td><img src="https://www.filepicker.io/api/file/Ov3HSDTNi1Qxo2tGOkAt" /></td>
-        <td><img src="https://www.filepicker.io/api/file/NmUWdmCJTQu4S1IpFf8g" /></td>
-        <td><img src="https://www.filepicker.io/api/file/oMWvozTeXY1B3LdKTXQS" /></td>
-        <td><img src="https://www.filepicker.io/api/file/r3zjWqWRRxGoP8NlQXHH" /></td>
+        <td><img src="https://www.filepicker.io/api/file/gAfSPg2HSDmuq5PPlWDD" /></td>
+        <td><img src="https://www.filepicker.io/api/file/lZr1NvZ5SwCU4nDniLvs" /></td>
+        <td><img src="https://www.filepicker.io/api/file/Cfg6Vz7CS6aEOQcsIkKF" /></td>
+        <td><img src="https://www.filepicker.io/api/file/I6TYQGveS42wU4XcsfpN" /></td>
     </tr>
 </table>
 
 <table>
     <tr>
-        <td><img src="https://www.filepicker.io/api/file/qfRROH6cRZa8UpYo85Vd" /></td>
-        <td><img src="https://www.filepicker.io/api/file/4OnXrQpCSi2Ny3xybchA" /></td>
+        <td><img src="https://www.filepicker.io/api/file/VcYx0KUbSQ2g3WdYTzeJ" /></td>
+        <td><img src="https://www.filepicker.io/api/file/8sbJ4nGS06Del6zfi4Dv" /></td>
     </tr>
 </table>
 
 ## Instructor
-<img src="https://www.filepicker.io/api/file/RF2tbC4kSReyIy0Bnhyx" width="15%" />
-<h4>Sam</h4>
+<img src="https://www.filepicker.io/api/file/UFx5lSgy7gkFMC5Z2cwF" width="15%" />
+<h4>Sam Pattuzzi</h4>
 
 ## Curriculum
 ### Introduction & Setup
@@ -38,4 +38,4 @@ by [GameDev.tv](https://www.gamedev.tv)
 ### Basic Movement
 - Section Overview - Basic Movement (1:03)
 - [Create A Simple Sandbox (13:16)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/676744fa391e9d79ec1be7171045b30d3417cfe5)
-- [Move Using Nav Mesh Agent (8:26)]()
+- [Move Using Nav Mesh Agent (8:26)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/c3165312ced0b4a5c3d14a3b22297594e6c44287)
