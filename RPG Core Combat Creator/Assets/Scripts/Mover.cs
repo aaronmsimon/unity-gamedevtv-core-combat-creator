@@ -6,16 +6,12 @@ using UnityEngine.InputSystem;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] private Transform target;
-
-    private Ray lastRay;
     private PlayerControls playerControls;
-
     private NavMeshAgent navMeshAgent;
 
     private void Awake() {
-        navMeshAgent = GetComponent<NavMeshAgent>();
         playerControls = new PlayerControls();
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     private void OnEnable() {
@@ -28,8 +24,11 @@ public class Mover : MonoBehaviour
     }
 
     private void Move(InputAction.CallbackContext ctx) {
-        lastRay = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        Debug.DrawRay(lastRay.origin, lastRay.direction * 100, Color.red, 3f);
-        // navMeshAgent.destination = target.position;
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        RaycastHit hitInfo;
+
+        if (Physics.Raycast(ray, out hitInfo)) {
+            navMeshAgent.destination = hitInfo.point;
+        }
     }
 }
