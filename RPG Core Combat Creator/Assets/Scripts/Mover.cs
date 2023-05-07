@@ -10,6 +10,8 @@ public class Mover : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Animator animator;
 
+    private bool buttonPressed = false;
+
     private void Awake() {
         playerControls = new PlayerControls();
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -18,7 +20,8 @@ public class Mover : MonoBehaviour
 
     private void OnEnable() {
         playerControls.Enable();
-        playerControls.Player.Move.performed += Move;
+        playerControls.Player.Move.started += _ => buttonPressed = true;
+        playerControls.Player.Move.canceled += _ => buttonPressed = false;
     }
 
     private void OnDisable() {
@@ -26,15 +29,18 @@ public class Mover : MonoBehaviour
     }
 
     private void Update() {
+        Move();
         UpdateAnimator();
     }
 
-    private void Move(InputAction.CallbackContext ctx) {
-        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        RaycastHit hitInfo;
+    private void Move() {
+        if (buttonPressed) {
+            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            RaycastHit hitInfo;
 
-        if (Physics.Raycast(ray, out hitInfo)) {
-            navMeshAgent.destination = hitInfo.point;
+            if (Physics.Raycast(ray, out hitInfo)) {
+                navMeshAgent.destination = hitInfo.point;
+            }
         }
     }
 
