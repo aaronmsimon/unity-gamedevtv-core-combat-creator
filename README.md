@@ -43,4 +43,5 @@ by [GameDev.tv](https://www.gamedev.tv)
 - [Introduction To Raycasting (6:51)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/82788703ff217b99e0e7d38c35b81338bdbcc6eb)
 - [Implement Click-To-Move (10:06)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/8711ea09a41c9ed40f20f91bfc11a428930627ca)
 - [Quiz - Basic Movement #1]
-- [Create A Fixed Follow Camera (6:48)]
+- [Create A Fixed Follow Camera (6:48)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/65e934c60e19ba741a9024fe1289324c243fe9df)
+- [Animation Blend Trees (12:41)]
