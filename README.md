@@ -60,4 +60,7 @@ by [GameDev.tv](https://www.gamedev.tv)
 
 ### Basic Combat
 - [Section Overview - Basic Combat (1:12)]
-- [Separating The Control Layer (12:21)]
+- [Separating The Control Layer (12:21)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/ff45f9c31a114f17fe9256450f0eb20503d97704)
+- [Namespaces To See Dependencies (13:00)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/1bd8d19c65244b20ad3973c824dbd042cf73e911)
+- [Raycasting For Components (14:34)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/0bd672c4645bbc19e1764d95b093fa1a770341bb)
+- [Implementing Action Priority (10:00)]
