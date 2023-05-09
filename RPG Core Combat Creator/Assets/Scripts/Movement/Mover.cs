@@ -3,29 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Mover : MonoBehaviour
+namespace RPG.Movement
 {
-    private NavMeshAgent navMeshAgent;
-    private Animator animator;
+    public class Mover : MonoBehaviour
+    {
+        private NavMeshAgent navMeshAgent;
+        private Animator animator;
 
-    private void Awake() {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-    }
+        private void Awake() {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+            animator = GetComponent<Animator>();
+        }
 
-    private void Update() {
-        UpdateAnimator();
-    }
+        private void Update() {
+            UpdateAnimator();
+        }
 
-    public void MoveTo(Vector3 destination) {
-        navMeshAgent.destination = destination;
-    }
+        public void MoveTo(Vector3 destination) {
+            navMeshAgent.destination = destination;
+        }
 
-    private void UpdateAnimator() {
-        Vector3 worldVelocity = navMeshAgent.velocity;
-        Vector3 localVelocity = transform.InverseTransformDirection(worldVelocity);
-        float speed = localVelocity.z;
+        private void UpdateAnimator() {
+            Vector3 worldVelocity = navMeshAgent.velocity;
+            Vector3 localVelocity = transform.InverseTransformDirection(worldVelocity);
+            float speed = localVelocity.z;
 
-        animator.SetFloat("forwardSpeed", speed);
+            animator.SetFloat("forwardSpeed", speed);
+        }
     }
 }
