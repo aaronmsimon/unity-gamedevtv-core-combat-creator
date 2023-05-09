@@ -9,11 +9,13 @@ namespace RPG.Control
     {
         private PlayerControls playerControls;
         private bool buttonPressed = false;
+
         private Mover mover;
         private Fighter fighter;
 
         private void Awake() {
             playerControls = new PlayerControls();
+
             mover = GetComponent<Mover>();
             fighter = GetComponent<Fighter>();
         }
@@ -46,13 +48,13 @@ namespace RPG.Control
 
         private void Combat()
         {
-            if (buttonPressed) {
-                RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
-                foreach (RaycastHit hit in hits) {
-                    CombatTarget enemy = hit.transform.GetComponent<CombatTarget>();
-                    if (enemy != null) {
-                        fighter.Attack();
-                    }
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            foreach (RaycastHit hit in hits) {
+                CombatTarget target = hit.transform.GetComponent<CombatTarget>();
+                if (target == null) continue;
+
+                if (playerControls.Player.Move.triggered) {
+                    fighter.Attack();
                 }
             }
         }
