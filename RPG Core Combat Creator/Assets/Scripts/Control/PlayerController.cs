@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using RPG.Movement;
+using RPG.Combat;
 
 namespace RPG.Control
 {
@@ -11,10 +10,12 @@ namespace RPG.Control
         private PlayerControls playerControls;
         private bool buttonPressed = false;
         private Mover mover;
+        private Fighter fighter;
 
         private void Awake() {
             playerControls = new PlayerControls();
             mover = GetComponent<Mover>();
+            fighter = GetComponent<Fighter>();
         }
 
         private void OnEnable() {
@@ -29,17 +30,35 @@ namespace RPG.Control
 
         private void Update() {
             Move();
+            Combat();
         }
 
         private void Move() {
             if (buttonPressed) {
-                Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
                 RaycastHit hitInfo;
 
-                if (Physics.Raycast(ray, out hitInfo)) {
+                if (Physics.Raycast(GetMouseRay(), out hitInfo))
+                {
                     mover.MoveTo(hitInfo.point);
                 }
             }
+        }
+
+        private void Combat()
+        {
+            if (buttonPressed) {
+                RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+                foreach (RaycastHit hit in hits) {
+                    CombatTarget enemy = hit.transform.GetComponent<CombatTarget>();
+                    if (enemy != null) {
+                        fighter.Attack();
+                    }
+                }
+            }
+        }
+
+        private static Ray GetMouseRay() {
+            return Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         }
     }
 }
