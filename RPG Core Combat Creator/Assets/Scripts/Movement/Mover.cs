@@ -24,6 +24,7 @@ namespace RPG.Movement
         }
 
         public void StartMoveToAction(Vector3 destination) {
+            GetComponent<ActionScheduler>().StartAction(this);
             fighter.Cancel();
             MoveTo(destination);
         }
@@ -31,7 +32,6 @@ namespace RPG.Movement
         public void MoveTo(Vector3 destination) {
             navMeshAgent.isStopped = false;
             navMeshAgent.destination = destination;
-            GetComponent<ActionScheduler>().StartAction(this);
         }
 
         public void Stop() {
