@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using RPG.Combat;
 
 namespace RPG.Movement
 {
@@ -9,14 +10,21 @@ namespace RPG.Movement
     {
         private NavMeshAgent navMeshAgent;
         private Animator animator;
+        private Fighter fighter;
 
         private void Awake() {
             navMeshAgent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
+            fighter = GetComponent<Fighter>();
         }
 
         private void Update() {
             UpdateAnimator();
+        }
+
+        public void StartMoveToAction(Vector3 destination) {
+            fighter.Cancel();
+            MoveTo(destination);
         }
 
         public void MoveTo(Vector3 destination) {

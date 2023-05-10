@@ -42,7 +42,7 @@ namespace RPG.Control
             if (Physics.Raycast(GetMouseRay(), out hitInfo))
             {
                 if (buttonPressed) {
-                    mover.MoveTo(hitInfo.point);
+                    mover.StartMoveToAction(hitInfo.point);
                 }
                 return true;
             }

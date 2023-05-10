@@ -16,7 +16,9 @@ namespace RPG.Combat
         }
 
         private void Update() {
-            if (target != null && !DetermineIsInRange()) {
+            if (target == null) return;
+
+            if (!DetermineIsInRange()) {
                 mover.MoveTo(target.position);
             } else {
                 mover.Stop();
