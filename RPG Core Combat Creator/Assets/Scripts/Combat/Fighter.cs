@@ -16,11 +16,11 @@ namespace RPG.Combat
         }
 
         private void Update() {
-            if (target != null) {
+            bool isInRange = Vector3.Distance(target.position, transform.position) < weaponRange;
+            if (target != null && !isInRange) {
                 mover.MoveTo(target.position);
-                if (Mathf.Abs((target.position - transform.position).magnitude) < weaponRange) {
-                    mover.Stop();
-                }
+            } else {
+                mover.Stop();
             }
         }
 
