@@ -31,22 +31,25 @@ namespace RPG.Control
         }
 
         private void Update() {
-            Move();
-            Combat();
+            if (InteractWithCombat()) return;
+            if (InteractWithMove()) return;
+            Debug.Log("Nothing to do.");
         }
 
-        private void Move() {
-            if (buttonPressed) {
-                RaycastHit hitInfo;
+        private bool InteractWithMove() {
+            RaycastHit hitInfo;
 
-                if (Physics.Raycast(GetMouseRay(), out hitInfo))
-                {
+            if (Physics.Raycast(GetMouseRay(), out hitInfo))
+            {
+                if (buttonPressed) {
                     mover.MoveTo(hitInfo.point);
                 }
+                return true;
             }
+            return false;
         }
 
-        private void Combat()
+        private bool InteractWithCombat()
         {
             RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
             foreach (RaycastHit hit in hits) {
@@ -56,7 +59,9 @@ namespace RPG.Control
                 if (playerControls.Player.Move.triggered) {
                     fighter.Attack();
                 }
+                return true;
             }
+            return false;
         }
 
         private static Ray GetMouseRay() {
