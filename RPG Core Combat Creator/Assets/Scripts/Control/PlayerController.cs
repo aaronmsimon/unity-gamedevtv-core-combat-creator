@@ -57,7 +57,7 @@ namespace RPG.Control
                 if (target == null) continue;
 
                 if (playerControls.Player.Move.triggered) {
-                    fighter.Attack();
+                    fighter.Attack(target);
                 }
                 return true;
             }
