@@ -8,6 +8,7 @@ namespace RPG.Combat
     {
         [SerializeField] private float weaponRange = 2f;
         [SerializeField] private float timeBetweenAttacks = 1f;
+        [SerializeField] private float damageAmount = 5f;
 
         private Transform target;
         private float timeSinceLastAttack;
@@ -50,6 +51,7 @@ namespace RPG.Combat
             if (timeSinceLastAttack >= timeBetweenAttacks) {
                 animator.SetTrigger("attack");
                 timeSinceLastAttack = 0;
+                target.GetComponent<Health>().TakeDamage(damageAmount);
             }
         }
 
