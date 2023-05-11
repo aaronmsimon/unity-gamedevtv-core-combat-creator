@@ -11,9 +11,11 @@ namespace RPG.Combat
         private Transform target;
 
         private Mover mover;
+        private Animator animator;
 
         private void Awake() {
             mover = GetComponent<Mover>();
+            animator = GetComponent<Animator>();
         }
 
         private void Update() {
@@ -23,6 +25,7 @@ namespace RPG.Combat
                 mover.MoveTo(target.position);
             } else {
                 mover.Cancel();
+                AttackBehavior();
             }
         }
 
@@ -35,8 +38,17 @@ namespace RPG.Combat
             GetComponent<ActionScheduler>().StartAction(this);
         }
 
+        private void AttackBehavior() {
+            animator.SetTrigger("attack");
+        }
+
         public void Cancel() {
             target = null;
+        }
+
+        // Animation Event
+        private void Hit() {
+            
         }
     }
 }
