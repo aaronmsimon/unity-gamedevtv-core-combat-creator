@@ -6,9 +6,11 @@ namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour, IAction
     {
-        [SerializeField] private float weaponRange;
+        [SerializeField] private float weaponRange = 2f;
+        [SerializeField] private float timeBetweenAttacks = 1f;
 
         private Transform target;
+        private float timeSinceLastAttack;
 
         private Mover mover;
         private Animator animator;
@@ -16,6 +18,10 @@ namespace RPG.Combat
         private void Awake() {
             mover = GetComponent<Mover>();
             animator = GetComponent<Animator>();
+        }
+
+        private void Start() {
+            timeSinceLastAttack = 0;
         }
 
         private void Update() {
@@ -27,6 +33,8 @@ namespace RPG.Combat
                 mover.Cancel();
                 AttackBehavior();
             }
+
+            timeSinceLastAttack += Time.deltaTime;
         }
 
         private bool DetermineIsInRange() {
@@ -39,7 +47,10 @@ namespace RPG.Combat
         }
 
         private void AttackBehavior() {
-            animator.SetTrigger("attack");
+            if (timeSinceLastAttack >= timeBetweenAttacks) {
+                animator.SetTrigger("attack");
+                timeSinceLastAttack = 0;
+            }
         }
 
         public void Cancel() {
