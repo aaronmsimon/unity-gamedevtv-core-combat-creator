@@ -51,6 +51,8 @@ namespace RPG.Combat
         private void AttackBehavior() {
             if (timeSinceLastAttack >= timeBetweenAttacks) {
                 transform.LookAt(target.transform);
+
+                animator.ResetTrigger("cancelAttack");
                 // This will trigger the Hit event
                 animator.SetTrigger("attack");
                 timeSinceLastAttack = 0;
@@ -64,11 +66,13 @@ namespace RPG.Combat
 
         public void Cancel() {
             target = null;
+            animator.ResetTrigger("attack");
             animator.SetTrigger("cancelAttack");
         }
 
         // Animation Event
         private void Hit() {
+            if (target == null) return;
             target.TakeDamage(weaponDamage);
         }
     }
