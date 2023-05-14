@@ -11,6 +11,11 @@ namespace RPG.Combat
 
         private Animator animator;
 
+        // temp (will use getters and setters in future video)
+        public bool IsDead() {
+            return isDead;
+        }
+
         private void Awake() {
             animator = GetComponent<Animator>();
         }
