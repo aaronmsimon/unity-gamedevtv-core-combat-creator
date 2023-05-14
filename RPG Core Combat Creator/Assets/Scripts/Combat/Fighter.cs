@@ -58,6 +58,7 @@ namespace RPG.Combat
         }
 
         public bool CanAttack(CombatTarget combatTarget) {
+            if (combatTarget == null) return false;
             return combatTarget != null && !combatTarget.GetComponent<Health>().IsDead();
         }
 
