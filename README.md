@@ -74,3 +74,43 @@ by [GameDev.tv](https://www.gamedev.tv)
 - [Throttling Our Attacks (6:13)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/bd99641557a7b758acc6c98f0ede61f4e2cf49d8)
 - [Taking Damage (8:47)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/1950efb8da73cb487876be17f2427b281444dcdd)
 - [Nested Prefabs And Variants (12:03)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/2813b4dead0b596100ea2475e4fc20471b84f54a)
+- [Using Prefab Variants (10:34)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/4580d8925e19c151627f848000d6a3077627647c)
+- Quiz - Basic Combat #2
+- [Any State Animation (3:28)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/8ceed4d2bb4fa94cdf25d785f305c9b383722630)
+- [Trigger Death Animation (4:27)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/3f48c3a6522b0917c1d07e9481c6e97fd27ab389)
+- [Stop Attacking Already (10:39)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/b79f6dd0e2e2f2f399d80435059598a9d254f66b)
+- [Look Them In The Eyes (6:41)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/b50774be33ec88e8e18930f7c54b15445d671174)
+- [Ignore Dead Enemies (6:25)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/2628bbdadb0f38604be878a8284db70ecb4b63d6)
+- [Bugs? What Bugs? (10:48)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/91b6f57337d3a485a09a72469689b38214c9c071)
+- Quiz - Basic Combat #3
+
+### Enemy AI
+- Section Overview - Enemy AI (2:20)
+- Calculating AI Chase Distance (9:01)
+- Swappable Control Systems (10:44)
+- Disable Control When Dead (10:27)
+- Visualising With Gizmos (6:55)
+- AI Guarding Behavior (4:21)
+- Quiz - Enemy AI #1
+- That's Some Suspicious Behaviour (8:29)
+- Visualising Waypoints (9:13)
+- Waypoint Loops (6:37)
+- Patrolling Behaviour (9:28)
+- Dwelling At Waypoints (7:22)
+- Quiz - Enemy AI #2
+
+### First Moment
+- Section Overview - First Moment (1:03)
+- Design A Moment (8:03)
+- Sketch Your Moment (8:22)
+- Tips To Improve Workflow (10:39)
+- Craft The Environment (10:54)
+- Hits-To-Kill Design Metric (8:05)
+- Quiz - First Moment #1
+- Tweak Enemy Patrol (13:03)
+- Cinemachine Follow Camera (9:04)
+- Make Cinematic Sequence (16:13)
+- Trigger Cinemachine Cut Scene (9:39)
+- The Observer Pattern In C# (14:04)
+- Player Input In Cutscenes (7:07)
+- Quiz - First Moment #2
