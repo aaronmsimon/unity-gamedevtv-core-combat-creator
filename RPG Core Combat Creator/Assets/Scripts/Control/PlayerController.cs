@@ -54,7 +54,7 @@ namespace RPG.Control
             RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
             foreach (RaycastHit hit in hits) {
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
-                if (target == null) continue;
+                if (!fighter.CanAttack(target)) continue;
 
                 if (playerControls.Player.Move.triggered) {
                     fighter.Attack(target);
