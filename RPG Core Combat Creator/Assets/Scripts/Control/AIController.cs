@@ -17,26 +17,16 @@ namespace RPG.Control
         }
 
         private void Update() {
-            if (DistanceToPlayer() <= chaseDistance) {
-                PerformCombat();
+            if (PlayerInAttackRange() && fighter.CanAttack(player)) {
+                fighter.Attack(player);
             } else {
                 fighter.Cancel();
             }
         }
 
-        private float DistanceToPlayer() {
-            return Vector3.Distance(transform.position, player.transform.position);
-        }
-
-        private void PerformCombat()
-        {
-            GameObject target = player;
-            
-            if (target == null) return;
-
-            if (!fighter.CanAttack(target.gameObject)) return;
-
-            fighter.Attack(target.gameObject);
+        private bool PlayerInAttackRange() {
+            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+            return distanceToPlayer <= chaseDistance;
         }
     }
 }
