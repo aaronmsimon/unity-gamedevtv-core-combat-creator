@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 174424795, guid: f3b39fb811bbd4d4c80aaf698d2bcfcf, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 887530945152334717, guid: f3b39fb811bbd4d4c80aaf698d2bcfcf, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -157,3 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c92b6783c35c5a4da6c75760df096dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chaseDistance: 5

@@ -86,7 +86,7 @@ by [GameDev.tv](https://www.gamedev.tv)
 
 ### Enemy AI
 - Section Overview - Enemy AI (2:20)
-- Calculating AI Chase Distance (9:01)
+- [Calculating AI Chase Distance (9:01)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/d320e45c87ca5c19fb46af9963e829c15a4f88ac)
 - Swappable Control Systems (10:44)
 - Disable Control When Dead (10:27)
 - Visualising With Gizmos (6:55)
