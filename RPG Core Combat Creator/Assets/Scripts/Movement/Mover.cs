@@ -9,13 +9,17 @@ namespace RPG.Movement
         private NavMeshAgent navMeshAgent;
         private Animator animator;
 
+        private Health health;
+
         private void Awake() {
             navMeshAgent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
+            health = GetComponent<Health>();
         }
 
         private void Update() {
             UpdateAnimator();
+            navMeshAgent.enabled = !health.IsDead();
         }
 
         public void StartMoveToAction(Vector3 destination) {
@@ -24,12 +28,14 @@ namespace RPG.Movement
         }
 
         public void MoveTo(Vector3 destination) {
+            if (health.IsDead()) return;
             navMeshAgent.isStopped = false;
             navMeshAgent.destination = destination;
         }
 
         public void Cancel() {
-            navMeshAgent.isStopped = true;
+            if (navMeshAgent.enabled)
+                navMeshAgent.isStopped = true;
         }
 
         private void UpdateAnimator() {

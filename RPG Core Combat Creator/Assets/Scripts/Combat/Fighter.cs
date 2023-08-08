@@ -22,7 +22,7 @@ namespace RPG.Combat
         }
 
         private void Start() {
-            timeSinceLastAttack = 0;
+            timeSinceLastAttack = Mathf.Infinity;
         }
 
         private void Update() {
