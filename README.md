@@ -93,7 +93,7 @@ by [GameDev.tv](https://www.gamedev.tv)
 - [AI Guarding Behavior (4:21)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/db76467eac055b124a341e1af4c33c533f7e082c)
 - Quiz - Enemy AI #1
 - [That's Some Suspicious Behaviour (8:29)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/3e8c953413904a554dbd26c2531549544626b0b0)
-- Visualising Waypoints (9:13)
+- [Visualising Waypoints (9:13)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/dd8826bf1c56079c18f2d45eb8a9f87f477b7b28)
 - Waypoint Loops (6:37)
 - Patrolling Behaviour (9:28)
 - Dwelling At Waypoints (7:22)
