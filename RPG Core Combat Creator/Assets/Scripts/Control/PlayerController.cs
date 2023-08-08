@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using RPG.Movement;
 using RPG.Combat;
+using RPG.Core;
 
 namespace RPG.Control
 {
@@ -12,12 +13,14 @@ namespace RPG.Control
 
         private Mover mover;
         private Fighter fighter;
+        private Health health;
 
         private void Awake() {
             playerControls = new PlayerControls();
 
             mover = GetComponent<Mover>();
             fighter = GetComponent<Fighter>();
+            health = GetComponent<Health>();
         }
 
         private void OnEnable() {
@@ -31,6 +34,7 @@ namespace RPG.Control
         }
 
         private void Update() {
+            if (health.IsDead()) return;
             if (InteractWithCombat()) return;
             if (InteractWithMove()) return;
             Debug.Log("Nothing to do.");

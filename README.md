@@ -90,7 +90,7 @@ by [GameDev.tv](https://www.gamedev.tv)
 - [Swappable Control Systems (10:44)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/d39c22c1484597e5757c0e699d0c551db3c3527d)
 - [Disable Control When Dead (10:27)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/0f171675a83b63076dbb6c8700b8267712e514da)
 - [Visualising With Gizmos (6:55)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/def4e17cd6b682a4b579a60523722a4e1f08a467)
-- AI Guarding Behavior (4:21)
+- [AI Guarding Behavior (4:21)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/db76467eac055b124a341e1af4c33c533f7e082c)
 - Quiz - Enemy AI #1
 - That's Some Suspicious Behaviour (8:29)
 - Visualising Waypoints (9:13)

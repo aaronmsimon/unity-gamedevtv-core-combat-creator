@@ -28,7 +28,6 @@ namespace RPG.Movement
         }
 
         public void MoveTo(Vector3 destination) {
-            if (health.IsDead()) return;
             navMeshAgent.isStopped = false;
             navMeshAgent.destination = destination;
         }
