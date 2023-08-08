@@ -61,15 +61,15 @@ namespace RPG.Control
 
             if (patrolPath != null) {
                 if (AtWaypoint()) {
-                    if (timeSinceReachedWaypoint > waypointDwellTime)
-                        CycleWaypoint();
-                } else {
                     timeSinceReachedWaypoint = 0f;
+                    CycleWaypoint();
                 }
                 nextPos = GetCurrentWaypoint();
             }
 
-            mover.StartMoveToAction(nextPos);
+            if (timeSinceReachedWaypoint > waypointDwellTime) {
+                mover.StartMoveToAction(nextPos);
+            }
         }
 
         private void SuspicionBehavior()
