@@ -63,7 +63,7 @@ namespace RPG.Control
 
                 if (!fighter.CanAttack(target.gameObject)) continue;
 
-                if (playerControls.Player.Move.triggered) {
+                if (buttonPressed) {
                     fighter.Attack(target.gameObject);
                 }
                 return true;
