@@ -92,7 +92,7 @@ by [GameDev.tv](https://www.gamedev.tv)
 - [Visualising With Gizmos (6:55)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/def4e17cd6b682a4b579a60523722a4e1f08a467)
 - [AI Guarding Behavior (4:21)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/db76467eac055b124a341e1af4c33c533f7e082c)
 - Quiz - Enemy AI #1
-- That's Some Suspicious Behaviour (8:29)
+- [That's Some Suspicious Behaviour (8:29)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/3e8c953413904a554dbd26c2531549544626b0b0)
 - Visualising Waypoints (9:13)
 - Waypoint Loops (6:37)
 - Patrolling Behaviour (9:28)
