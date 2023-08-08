@@ -1,5 +1,6 @@
 using UnityEngine;
 using RPG.Combat;
+using RPG.Movement;
 
 namespace RPG.Control
 {
@@ -7,20 +8,27 @@ namespace RPG.Control
     {
         [SerializeField] private float chaseDistance = 5f;
 
-        private Fighter fighter;
+        private Vector3 guardPos;
 
         private GameObject player;
+        private Fighter fighter;
+        private Mover mover;
 
         private void Awake() {
-            fighter = GetComponent<Fighter>();
             player = GameObject.FindWithTag("Player");
+            fighter = GetComponent<Fighter>();
+            mover = GetComponent<Mover>();
+        }
+
+        private void Start() {
+            guardPos = transform.position;
         }
 
         private void Update() {
             if (PlayerInAttackRange() && fighter.CanAttack(player)) {
                 fighter.Attack(player);
             } else {
-                fighter.Cancel();
+                mover.StartMoveToAction(guardPos); // this will cancel the fight action, too!
             }
         }
 
