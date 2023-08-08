@@ -9,9 +9,12 @@ namespace RPG.Control
     {
         [SerializeField] private float chaseDistance = 5f;
         [SerializeField] private float susTime = 2f;
+        [SerializeField] private PatrolPath patrolPath;
+        [SerializeField] private float waypointTolerance = 1f;
 
         private Vector3 guardPos;
         private float timeSinceLastSawPlayer = Mathf.Infinity;
+        private int waypointIndex = 0;
 
         private GameObject player;
         private Fighter fighter;
@@ -43,15 +46,24 @@ namespace RPG.Control
             }
             else
             {
-                GuardBehavior(); // this will cancel the fight action, too!
+                PatrolBehavior();
             }
 
             timeSinceLastSawPlayer += Time.deltaTime;
         }
 
-        private void GuardBehavior()
+        private void PatrolBehavior()
         {
-            mover.StartMoveToAction(guardPos);
+            Vector3 nextPos = guardPos;
+
+            if (patrolPath != null) {
+                if (AtWaypoint()) {
+                    CycleWaypoint();
+                }
+                nextPos = GetCurrentWaypoint();
+            }
+
+            mover.StartMoveToAction(nextPos);
         }
 
         private void SuspicionBehavior()
@@ -67,6 +79,19 @@ namespace RPG.Control
         private bool PlayerInAttackRange() {
             float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
             return distanceToPlayer <= chaseDistance;
+        }
+
+        private bool AtWaypoint() {
+            float distanceToWaypoint = Vector3.Distance(transform.position, GetCurrentWaypoint());
+            return distanceToWaypoint <= waypointTolerance;
+        }
+
+        private void CycleWaypoint() {
+            waypointIndex = patrolPath.GetNextIndex(waypointIndex);
+        }
+
+        private Vector3 GetCurrentWaypoint() {
+            return patrolPath.GetWaypoint(waypointIndex);
         }
 
         private void OnDrawGizmosSelected() {
