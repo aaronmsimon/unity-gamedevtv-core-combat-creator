@@ -1,0 +1,8 @@
+1. One sentence overview of the moment
+	Player needs to get past the guards patroling the edge of town.
+2. Where is the moment taking place?
+	In the town, there is a path that leads off screen that will load a new scene.
+3. What is the player trying to do?
+	The player is trying to escape the town.
+4. What is one meaninful choice you can give the player?
+	The player can choose to remove the guards by force or find a way to sneak around them.

@@ -95,8 +95,8 @@ by [GameDev.tv](https://www.gamedev.tv)
 - [That's Some Suspicious Behaviour (8:29)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/3e8c953413904a554dbd26c2531549544626b0b0)
 - [Visualising Waypoints (9:13)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/dd8826bf1c56079c18f2d45eb8a9f87f477b7b28)
 - [Waypoint Loops (6:37)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/d0f5d929f860c134fe5f5de71d2867b2b06258b5)
-- Patrolling Behaviour (9:28)
-- Dwelling At Waypoints (7:22)
+- [Patrolling Behaviour (9:28)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/6b9cc79556fe085530ae939aa8ac7bdb1affcdec)
+- [Dwelling At Waypoints (7:22)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/e0927804b338d5e8cbebbfafeed8e391e2c19363)
 - Quiz - Enemy AI #2
 
 ### First Moment
