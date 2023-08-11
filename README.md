@@ -103,7 +103,7 @@ by [GameDev.tv](https://www.gamedev.tv)
 - Section Overview - First Moment (1:03)
 - [Design A Moment (8:03)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/62445ff0c06a370caa97a34d377f17a8da8ebdd6)
 - [Sketch Your Moment (8:22)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/8c1e5f312010475473047118623cce66bdb06c25)
-- Tips To Improve Workflow (10:39)
+- [Tips To Improve Workflow (10:39)](https://github.com/aaronmsimon/unity-gamedevtv-core-combat-creator/commit/e736dbfd6b71e4840b9647c66cbf104157aa7344)
 - Craft The Environment (10:54)
 - Hits-To-Kill Design Metric (8:05)
 - Quiz - First Moment #1
